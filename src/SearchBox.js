@@ -1,11 +1,11 @@
 
-import {useState,useEffect} from 'react'
+import {useState} from 'react'
 
 
 
 const SearchBox = ({rerender}) => {
   const [name, setname] = useState("");
-  const [list, setList] = useState([]);
+
   
   
   const Add = async (e) => {
@@ -17,9 +17,7 @@ const SearchBox = ({rerender}) => {
         title: name,
         status: false,
       });
-      setList(prev => {
-        return list1;
-      })
+     
       localStorage.setItem("list", JSON.stringify(list1));
       rerender();
       

@@ -3,7 +3,7 @@ import React from 'react'
 const Todo = ({ key1, title, status, done, icon,rerender }) => {
   const delete1 = () => {
     var list = JSON.parse(localStorage.getItem("list"));
-    var list2=list.filter((m) =>m.key!=key1 )
+    var list2=list.filter((m) =>m.key!==key1 )
     localStorage.setItem("list", JSON.stringify(list2));
      rerender();
    };
@@ -11,7 +11,7 @@ const Todo = ({ key1, title, status, done, icon,rerender }) => {
   const handle = (e) => {
     var list = JSON.parse(localStorage.getItem('list'));
     list.map((m) => {
-      if (m.key == key1) {
+      if (m.key === key1) {
         var a = m;
         a.status = !m.status;
         return a

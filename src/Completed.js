@@ -10,13 +10,13 @@ export default function Completed() {
   useEffect(() => {
     var list1 = JSON.parse(localStorage.getItem("list")) || [];
 
-    var list2 = list1.filter((m) => m.status == true);
+    var list2 = list1.filter((m) => m.status === true);
     setList(list2);
   }, []);
     const rerender = () => {
      var list1 = JSON.parse(localStorage.getItem("list")) || [];
 
-     var list2 = list1.filter((m) => m.status == true);
+     var list2 = list1.filter((m) => m.status === true);
      setList(list2);
     };
 
@@ -37,12 +37,12 @@ export default function Completed() {
       {list &&list.length?
         <div className="flex-end">
 
-        <a className="button-block" onClick={() => {
+        <button className="button-block" onClick={() => {
           deleteAll()
           
         }}>
           delete All
-        </a>
+        </button>
       </div>:<div className="red">no items checked off.....focus on your todo list</div>
       }
       

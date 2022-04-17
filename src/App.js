@@ -1,12 +1,12 @@
-import logo from './logo.svg';
+
 import './App.css';
-import SearchBox from './SearchBox'
+
 import All from "./All"
 import Nav from "./nav"
 import { Routes, Route, BrowserRouter } from "react-router-dom"
 import Active from "./Active"
 import Completed from './Completed';
-import { useEffect } from 'react';
+
 function App() {
    
   return (

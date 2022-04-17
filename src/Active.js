@@ -9,7 +9,7 @@ export default function Active() {
        var list1 = JSON.parse(localStorage.getItem("list")) || [];
      
        
-       var list2=list1.filter((m) => m.status == false);
+       var list2=list1.filter((m) => m.status === false);
        setList(list2);
     
     
@@ -17,7 +17,7 @@ export default function Active() {
       const rerender = () => {
          var list1 = JSON.parse(localStorage.getItem("list")) || [];
 
-         var list2 = list1.filter((m) => m.status == false);
+         var list2 = list1.filter((m) => m.status === false);
          setList(list2);
       };
    
