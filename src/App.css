@@ -170,3 +170,11 @@ color :#8E3B46;
 .green{
   color:#4C86A8;
 }
+
+@media screen and (max-width: 600px) {
+  
+  .container {
+    width: 100%;
+  
+  }
+}
