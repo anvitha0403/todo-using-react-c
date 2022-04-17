@@ -1,24 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
-
+import SearchBox from './SearchBox'
+import All from "./All"
+import Nav from "./nav"
+import { Routes, Route, BrowserRouter } from "react-router-dom"
+import Active from "./Active"
+import Completed from './Completed';
+import { useEffect } from 'react';
 function App() {
+   
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App ">
+        <div className="container">
+          <Nav />
+          <Routes>
+            <Route
+              path="/"
+              element={<All  />}
+            ></Route>
+            <Route path="/active" element={<Active />}></Route>
+            <Route path="/done" element={<Completed  />} />
+          </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
